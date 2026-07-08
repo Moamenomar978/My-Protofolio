@@ -1,267 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services | Moamen Fathy</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | Moamen Fathy – Frontend Developer</title>
+  <meta name="description" content="Frontend development, UI design, landing pages, and website redesign services by Moamen Fathy.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <div class="nav">
-        <div class="nav-bar">
-            <div class="logo">
-                Protofolio
-            </div>
-            <ul class="items">
-                <li>
-                    <a href="index.html#home">Home</a>
-                </li>
-                <li>
-                    <a href="index.html#about">About</a>
-                </li>
-                <li>
-                    <a href="index.html#skills">Skills</a>
-                </li>
-                <li>
-                    <a href="index.html#projects">Projects</a>
-                </li>
-                <li>
-                    <a href="index.html#contact">Contact</a>
-                </li>
-                <li>
-                    <a href="cv.html">CV</a>
-                </li>
-            </ul>
-            <div class="nav-right">
-                <button class="theme-btn">
-                    <i class="fa-solid fa-moon"></i>
-                </button>
-                <button class="menu-btn">
-                    <i class="fa-solid fa-bars"></i>
-                </button>
-            </div>
-        </div>
+<div class="scroll-progress"></div>
+
+<nav class="nav" id="navbar">
+  <div class="logo"><a href="index.html">Moamen.</a></div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html#home">Home</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#skills">Skills</a></li>
+    <li><a href="index.html#projects">Projects</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+    <li><a href="services.html" class="active-link">Services</a></li>
+    <li><a href="cv.html">CV</a></li>
+  </ul>
+  <div class="nav-actions">
+    <button class="theme-btn" id="themeBtn" aria-label="Toggle theme"><i class="fa-solid fa-moon"></i></button>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="page-hero">
+  <p class="section-tag" style="display:inline-flex;margin-bottom:18px;">
+    <i class="fa-solid fa-briefcase"></i> What I Offer
+  </p>
+  <h1>My <span>Services</span></h1>
+  <p>
+    High-quality frontend development and design services tailored
+    exactly to your needs — on time and within budget.
+  </p>
+</div>
+
+<!-- SERVICES GRID -->
+<div class="services-grid">
+
+  <div class="service-card reveal" data-delay="1">
+    <div class="service-icon-wrap"><i class="fa-solid fa-code"></i></div>
+    <h3 class="service-title">Frontend Development</h3>
+    <p class="service-desc">
+      Building modern, fast, and fully responsive websites from scratch
+      using HTML5, CSS3, and vanilla JavaScript.
+    </p>
+    <ul class="service-features">
+      <li class="service-feature"><i class="fa-solid fa-check"></i> Responsive on all devices</li>
+      <li class="service-feature"><i class="fa-solid fa-check"></i> Clean &amp; organized code</li>
+      <li class="service-feature"><i class="fa-solid fa-check"></i> Cross-browser compatible</li>
+      <li class="service-feature"><i class="fa-solid fa-check"></i> Smooth animations</li>
+    </ul>
+    <div class="service-footer">
+      <div class="service-price-tag">
+        <div class="service-price-from">Starting from</div>
+        <div class="service-price-val">$50</div>
+      </div>
+      <a href="index.html#contact" class="btn btn-primary">Hire Me</a>
     </div>
+  </div>
 
-    <div class="page-hero">
-        <h1>My <span>Services</span></h1>
-        <p>
-            I provide high-quality frontend development and design services
-            tailored to your needs. Let's build something great together.
-        </p>
+  <div class="service-card reveal" data-delay="2">
+    <div class="service-icon-wrap"><i class="fa-solid fa-palette"></i></div>
+    <h3 class="service-title">UI Design</h3>
+    <p class="service-desc">
+      Designing clean, modern, user-centric interfaces with strong
+      visual hierarchy and outstanding UX.
+    </p>
+    <ul class="service-features">
+      <li class="service-feature"><i class="fa-solid fa-check"></i> Wireframes &amp; mockups</li>
+      <li class="service-feature"><i class="fa-solid fa-check"></i> Figma design files</li>
+      <li class="service-feature"><i class="fa-solid fa-check"></i> Color &amp; typography system</li>
+      <li class="service-feature"><i class="fa-solid fa-check"></i> Interactive prototypes</li>
+    </ul>
+    <div class="service-footer">
+      <div class="service-price-tag">
+        <div class="service-price-from">Starting from</div>
+        <div class="service-price-val">$40</div>
+      </div>
+      <a href="index.html#contact" class="btn btn-primary">Hire Me</a>
     </div>
+  </div>
 
-    <div class="services-container">
-
-        <div class="service-card">
-            <div class="service-icon">
-                <i class="fa-solid fa-code"></i>
-            </div>
-            <h3>Frontend Development</h3>
-            <p>
-                Building modern, fast, and fully responsive websites
-                using HTML5, CSS3, and JavaScript from scratch.
-            </p>
-            <ul class="service-features">
-                <li><i class="fa-solid fa-check"></i> Responsive on all devices</li>
-                <li><i class="fa-solid fa-check"></i> Clean & organized code</li>
-                <li><i class="fa-solid fa-check"></i> Cross-browser compatible</li>
-                <li><i class="fa-solid fa-check"></i> Smooth animations</li>
-            </ul>
-            <div class="service-price">
-                <div class="price-tag">
-                    <span>Starting from</span>
-                    <span>$50</span>
-                </div>
-                <a href="index.html#contact" class="btn primary-btn">Hire Me</a>
-            </div>
-        </div>
-
-        <div class="service-card">
-            <div class="service-icon">
-                <i class="fa-solid fa-palette"></i>
-            </div>
-            <h3>UI Design</h3>
-            <p>
-                Designing clean, modern, and user-friendly interfaces
-                with a focus on visual hierarchy and great user experience.
-            </p>
-            <ul class="service-features">
-                <li><i class="fa-solid fa-check"></i> Wireframes & mockups</li>
-                <li><i class="fa-solid fa-check"></i> Figma design files</li>
-                <li><i class="fa-solid fa-check"></i> Color system & typography</li>
-                <li><i class="fa-solid fa-check"></i> Interactive prototypes</li>
-            </ul>
-            <div class="service-price">
-                <div class="price-tag">
-                    <span>Starting from</span>
-                    <span>$40</span>
-                </div>
-                <a href="index.html#contact" class="btn primary-btn">Hire Me</a>
-            </div>
-        </div>
-
-        <div class="service-card">
-            <div class="service-icon">
-                <i class="fa-solid fa-mobile-screen"></i>
-            </div>
-            <h3>Landing Pages</h3>
-            <p>
-                Creating high-converting, visually stunning landing pages
-                that capture attention and turn visitors into clients.
-            </p>
-            <ul class="service-features">
-                <li><i class="fa-solid fa-check"></i> Fast loading speed</li>
-                <li><i class="fa-solid fa-check"></i> SEO-friendly structure</li>
-                <li><i class="fa-solid fa-check"></i> Contact form integration</li>
-                <li><i class="fa-solid fa-check"></i> Fully responsive</li>
-            </ul>
-            <div class="service-price">
-                <div class="price-tag">
-                    <span>Starting from</span>
-                    <span>$35</span>
-                </div>
-                <a href="index.html#contact" class="btn primary-btn">Hire Me</a>
-            </div>
-        </div>
-
-        <div class="service-card">
-            <div class="service-icon">
-                <i class="fa-solid fa-brush"></i>
-            </div>
-            <h3>Website Redesign</h3>
-            <p>
-                Revamping old or outdated websites into modern,
-                professional designs with improved usability and performance.
-            </p>
-            <ul class="service-features">
-                <li>
-                    <i class="fa-solid fa-check"></i>
-                     Modern visual upgrade
-                </li>
-                <li>
-                    <i class="fa-solid fa-check"></i>
-                     Improved UX flow
-                </li>
-                <li>
-                    <i class="fa-solid fa-check"></i>
-                     Mobile optimization
-                </li>
-                <li>
-                    <i class="fa-solid fa-check"></i> 
-                    Performance boost
-                </li>
-            </ul>
-            <div class="service-price">
-                <div class="price-tag">
-                    <span>Starting from</span>
-                    <span>$60</span>
-                </div>
-                <a href="index.html#contact" class="btn primary-btn">Hire Me</a>
-            </div>
-        </div>
-
-        <div class="service-card">
-            <div class="service-icon">
-                <i class="fa-solid fa-store"></i>
-            </div>
-            <h3>Portfolio Website</h3>
-            <p>
-                Building a professional personal portfolio to help
-                you stand out and showcase your work to potential clients.
-            </p>
-            <ul class="service-features">
-                <li>
-                    <i class="fa-solid fa-check"></i> 
-                    Custom design
-                </li>
-                <li>
-                    <i class="fa-solid fa-check"></i> 
-                    Projects showcase
-                </li>
-                <li>
-                    <i class="fa-solid fa-check"></i> 
-                    Contact section
-                </li>
-                <li>
-                    <i class="fa-solid fa-check"></i>
-                     Dark / Light mode
-                </li>
-            </ul>
-            <div class="service-price">
-                <div class="price-tag">
-                    <span>Starting from</span>
-                    <span>$45</span>
-                </div>
-                <a href="index.html#contact" class="btn primary-btn">Hire Me</a>
-            </div>
-        </div>
-
-        <div class="service-card">
-            <div class="service-icon">
-                <i class="fa-solid fa-bug"></i>
-            </div>
-            <h3>Bug Fixing & Support</h3>
-            <p>
-                Fixing issues in existing websites, improving code quality,
-                and providing ongoing maintenance and technical support.
-            </p>
-            <ul class="service-features">
-                <li>
-                    <i class="fa-solid fa-check"></i>
-                     CSS & layout fixes
-                </li>
-                <li>
-                    <i class="fa-solid fa-check"></i>
-                     JavaScript debugging
-                </li>
-                <li>
-                    <i class="fa-solid fa-check"></i> 
-                    Cross-browser fixes
-                </li>
-                <li>
-                    <i class="fa-solid fa-check"></i> 
-                    Code cleanup
-                </li>
-            </ul>
-            <div class="service-price">
-                <div class="price-tag">
-                    <span>Starting from</span>
-                    <span>$20</span>
-                </div>
-                <a href="index.html#contact" class="btn primary-btn">Hire Me</a>
-            </div>
-        </div>
+  <div class="service-card reveal" data-delay="3">
+    <div class="service-icon-wrap"><i class="fa-solid fa-mobile-screen"></i></div>
+    <h3 class="service-title">Landing Pages</h3>
+    <p class="service-desc">
+      High-converting, visually stunning landing pages that capture
+      attention and turn visitors into clients.
+    </p>
+    <ul class="service-features">
+      <li class="service-feature"><i class="fa-solid fa-check"></i> Fast loading speed</li>
+      <li class="service-feature"><i class="fa-solid fa-check"></i> SEO-friendly structure</li>
+      <li class="service-feature"><i class="fa-solid fa-check"></i> Contact form integration</li>
+      <li class="service-feature"><i class="fa-solid fa-check"></i> Fully responsive</li>
+    </ul>
+    <div class="service-footer">
+      <div class="service-price-tag">
+        <div class="service-price-from">Starting from</div>
+        <div class="service-price-val">$35</div>
+      </div>
+      <a href="index.html#contact" class="btn btn-primary">Hire Me</a>
     </div>
+  </div>
 
-   <div class="cta-section">
-        <div class="cta-text">
-            <h2>Have a Project in <span>Mind?</span></h2>
-            <p>
-                Let's work together to bring your ideas to life.
-                Feel free to reach out and we'll discuss your project needs.
-            </p>
-        </div>
-        <div class="cta-buttons">
-            <a href="index.html#contact" class="btn primary-btn">
-                <i class="fa-solid fa-envelope"></i> &nbsp; Contact Me
-            </a>
-            <a href="cv.html" class="btn secondary-btn">
-                <i class="fa-solid fa-file-lines"></i> &nbsp; View CV
-            </a>
-        </div>
+  <div class="service-card reveal" data-delay="4">
+    <div class="service-icon-wrap"><i class="fa-solid fa-brush"></i></div>
+    <h3 class="service-title">Website Redesign</h3>
+    <p class="service-desc">
+      Revamping outdated websites into modern, professional designs
+      with improved usability and performance.
+    </p>
+    <ul class="service-features">
+      <li class="service-feature"><i class="fa-solid fa-check"></i> Modern visual upgrade</li>
+      <li class="service-feature"><i class="fa-solid fa-check"></i> Improved UX flow</li>
+      <li class="service-feature"><i class="fa-solid fa-check"></i> Mobile optimization</li>
+      <li class="service-feature"><i class="fa-solid fa-check"></i> Performance boost</li>
+    </ul>
+    <div class="service-footer">
+      <div class="service-price-tag">
+        <div class="service-price-from">Starting from</div>
+        <div class="service-price-val">$60</div>
+      </div>
+      <a href="index.html#contact" class="btn btn-primary">Hire Me</a>
     </div>
+  </div>
 
-    <footer>
-        <p>
-            © 2026 Moamen | All Rights Reserved
-        </p>
-    </footer>
-    <script src="script.js"></script>
+  <div class="service-card reveal" data-delay="5">
+    <div class="service-icon-wrap"><i class="fa-solid fa-store"></i></div>
+    <h3 class="service-title">Portfolio Website</h3>
+    <p class="service-desc">
+      A professional personal portfolio to help you stand out and
+      showcase your work to potential clients and employers.
+    </p>
+    <ul class="service-features">
+      <li class="service-feature"><i class="fa-solid fa-check"></i> Custom design</li>
+      <li class="service-feature"><i class="fa-solid fa-check"></i> Projects showcase</li>
+      <li class="service-feature"><i class="fa-solid fa-check"></i> Contact section</li>
+      <li class="service-feature"><i class="fa-solid fa-check"></i> Dark / Light mode</li>
+    </ul>
+    <div class="service-footer">
+      <div class="service-price-tag">
+        <div class="service-price-from">Starting from</div>
+        <div class="service-price-val">$45</div>
+      </div>
+      <a href="index.html#contact" class="btn btn-primary">Hire Me</a>
+    </div>
+  </div>
+
+  <div class="service-card reveal" data-delay="6">
+    <div class="service-icon-wrap"><i class="fa-solid fa-bug"></i></div>
+    <h3 class="service-title">Bug Fixing &amp; Support</h3>
+    <p class="service-desc">
+      Fixing issues in existing websites, improving code quality,
+      and providing ongoing maintenance and technical support.
+    </p>
+    <ul class="service-features">
+      <li class="service-feature"><i class="fa-solid fa-check"></i> CSS &amp; layout fixes</li>
+      <li class="service-feature"><i class="fa-solid fa-check"></i> JavaScript debugging</li>
+      <li class="service-feature"><i class="fa-solid fa-check"></i> Cross-browser fixes</li>
+      <li class="service-feature"><i class="fa-solid fa-check"></i> Code cleanup</li>
+    </ul>
+    <div class="service-footer">
+      <div class="service-price-tag">
+        <div class="service-price-from">Starting from</div>
+        <div class="service-price-val">$20</div>
+      </div>
+      <a href="index.html#contact" class="btn btn-primary">Hire Me</a>
+    </div>
+  </div>
+
+</div>
+
+<!-- CTA -->
+<div class="cta-section">
+  <div>
+    <h2 class="cta-title">Have a Project in <span>Mind?</span></h2>
+    <p class="cta-desc">
+      Let's work together to bring your idea to life.
+      I respond to all inquiries within 24 hours.
+    </p>
+  </div>
+  <div class="cta-btns">
+    <a href="index.html#contact" class="btn btn-primary">
+      <i class="fa-solid fa-envelope"></i> Contact Me
+    </a>
+    <a href="cv.html" class="btn btn-outline">
+      <i class="fa-solid fa-file-lines"></i> View CV
+    </a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-logo">Moamen.</div>
+  <p class="footer-copy">© 2026 Moamen Fathy — All Rights Reserved</p>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="cv.html">CV</a>
+    <a href="index.html#contact">Contact</a>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<script src="script.js"></script>
 </body>
 </html>

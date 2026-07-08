@@ -1,447 +1,631 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Protofolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moamen Fathy | Frontend Developer</title>
+  <meta name="description" content="Moamen Fathy — Frontend Developer building modern, responsive, interactive websites with clean UI and smooth user experience.">
+  <meta property="og:title" content="Moamen Fathy | Frontend Developer">
+  <meta property="og:description" content="Modern, responsive, interactive websites with clean UI and smooth UX.">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="nav">
-        <div class="nav-bar">
-            <div class="logo">
-            <a href="#">Protofolio</a>
-            </div>
-            <ul class="items">
-                <li>
-                    <a href="#home">Home</a>
-                </li>
-                <li>
-                    <a href="#about">About</a>
-                </li>
-                <li>
-                    <a href="#skills">Skills</a>
-                </li>
-                <li>
-                    <a href="#projects">Projects</a>
-                </li>
-                <li>
-                    <a href="#contact">Contact</a>
-                </li>
-                <li>
-                    <a href="services.html">Services</a>
-                </li>
-                <li>
-                    <a href="cv.html">CV</a>
-                </li>
-            </ul>
-            <div class="nav-right">
-                <button class="theme-btn">
-                    <i class="fa-solid fa-moon"></i>
-                </button>
-                <button class="menu-btn">
-                    <i class="fa-solid fa-bars"></i>
-                </button>
-            </div>
+
+<!-- ===== PROGRESS BAR ===== -->
+<div class="scroll-progress"></div>
+
+<!-- ===== NAV ===== -->
+<nav class="nav" id="navbar">
+  <div class="logo"><a href="#">Moamen.</a></div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#home"    class="active-link">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="cv.html">CV</a></li>
+  </ul>
+  <div class="nav-actions">
+    <button class="theme-btn" id="themeBtn" aria-label="Toggle theme">
+      <i class="fa-solid fa-moon"></i>
+    </button>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section id="home">
+  <div class="hero-glow"></div>
+  <div class="hero-glow hero-glow-2"></div>
+  <div class="hero-dots" id="heroDots"></div>
+
+  <div class="hero-inner">
+    <div class="hero-left">
+      <p class="hero-greeting">
+        <span class="hero-greeting-dot"></span>
+        Available for work
+      </p>
+      <h1 class="hero-name">Moamen<br>Fathy</h1>
+      <h2 class="hero-role" id="typingEl"></h2>
+      <p class="hero-desc">
+        I build modern, responsive, and highly interactive websites
+        that combine clean code with stunning design to create
+        unforgettable user experiences.
+      </p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn btn-primary">
+          <i class="fa-solid fa-rocket"></i> View Projects
+        </a>
+        <a href="#contact" class="btn btn-outline">
+          <i class="fa-solid fa-envelope"></i> Contact Me
+        </a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-num" data-target="10">0</span>
+          <span class="stat-label">Projects Done</span>
         </div>
+        <div class="stat-item">
+          <span class="stat-num" data-target="8">0</span>
+          <span class="stat-label">Happy Clients</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num" data-target="2">0</span>
+          <span class="stat-label">Years Exp.</span>
+        </div>
+      </div>
     </div>
-    <div class="container">
 
-        <div class="group content" id="home">
-
-            <div class="content-left">
-
-                <p class="content-title">
-                    Hello, I'm
-                </p>
-
-                <h1>
-                    Moamen Fathy
-                </h1>
-                <h2 class="typing-text">
-                    Frontend Developer
-                </h2>
-                <p class="content-description">
-                    I create modern and interactive websites with clean UI
-                    and smooth user experience.
-                </p>
-                <div class="content-buttons">
-
-                    <a href="#projects" class="btn primary-btn">
-                        View Projects
-                    </a>
-
-                    <a href="#contact" class="btn secondary-btn">
-                        Contact Me
-                    </a>
-                </div>
-
-                <div class="social-icons">
-
-                    <a href="https://github.com/Moamenomar978">
-                        <i class="fa-brands fa-github"></i>
-                    </a>
-
-                    <a href="https://www.linkedin.com/in/moamen-fathy-67161a352/">
-                        <i class="fa-brands fa-linkedin"></i>
-                    </a>
-
-                    <a href="https://www.instagram.com/moamen_omar10/">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="content-right">
-                <div class="img">
-                    <img src="profile.jpeg" alt="Moamen Fathy">
-                </div>
-            </div>
+    <div class="hero-right">
+      <div class="profile-ring-wrap">
+        <div class="ring-outer"></div>
+        <div class="ring-inner"></div>
+        <div class="profile-img-wrap">
+          <img src="profile.jpeg" alt="Moamen Fathy">
         </div>
-
-        <div class="group about" id="about">
-
-            <div class="about-title">
-                <h2>About Me</h2>
-            </div>
-
-            <div class="about-container">
-
-                <div class="about-text">
-
-                    <h3>
-                        Who Am I?
-                    </h3>
-
-                    <p>
-                        I'm a frontend developer passionate about building
-                        modern, responsive, and user-friendly websites.
-                    </p>
-
-                    <p>
-                        I enjoy creating smooth animations, clean layouts,
-                        and interactive user experiences.
-                    </p>
-
-                    <div class="about-info">
-
-                        <div class="info-item">
-                            <i class="fa-solid fa-user"></i>
-                            <span>Moamen Fathy</span>
-                        </div>
-
-                        <div class="info-item">
-                            <i class="fa-solid fa-envelope"></i>
-                            <span>moamenfathy279@gmail.com</span>
-                        </div>
-
-                        <div class="info-item">
-                            <i class="fa-solid fa-location-dot"></i>
-                            <span>Egypt</span>
-                        </div>
-
-                        <div class="info-item">
-                            <i class="fa-solid fa-graduation-cap"></i>
-                            <span>Computer Science Student</span>
-                        </div>
-
-                    </div>
-
-                    <a href="cv.html" class="btn primary-btn about-cv-btn">
-                        View Full CV
-                    </a>
-
-                </div>
-
-                <div class="about-cards">
-
-                    <div class="card">
-                        <i class="fa-solid fa-code"></i>
-                        <h4>Web Development</h4>
-                        <p>Building modern responsive websites with HTML, CSS & JS</p>
-                    </div>
-
-                    <div class="card">
-                        <i class="fa-solid fa-palette"></i>
-                        <h4>UI Design</h4>
-                        <p>Designing clean and user-friendly interfaces</p>
-                    </div>
-
-                    <div class="card">
-                        <i class="fa-solid fa-mobile-screen"></i>
-                        <h4>Responsive Design</h4>
-                        <p>Creating sites that work perfectly on all devices</p>
-                    </div>
-
-                    <div class="card">
-                        <i class="fa-solid fa-wand-magic-sparkles"></i>
-                        <h4>Animations</h4>
-                        <p>Adding smooth transitions and interactive effects</p>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-        <div class="group skills" id="skills">
-
-            <div class="skills-title">
-                <h2>My Skills</h2>
-            </div>
-
-            <div class="skills-wrapper">
-
-                <div class="skills-left">
-
-                    <h3 class="skills-sub-title">
-                        <i class="fa-solid fa-chart-bar"></i> Technical Skills
-                    </h3>
-
-                    <div class="skills-container">
-
-                        <div class="skill">
-                            <div class="skill-info">
-                                <span>HTML</span>
-                                <span>95%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress html"></div>
-                            </div>
-                        </div>
-
-                        <div class="skill">
-                            <div class="skill-info">
-                                <span>CSS</span>
-                                <span>90%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress css"></div>
-                            </div>
-                        </div>
-
-                        <div class="skill">
-                            <div class="skill-info">
-                                <span>JavaScript</span>
-                                <span>80%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress javascript"></div>
-                            </div>
-                        </div>
-
-                        <div class="skill">
-                            <div class="skill-info">
-                                <span>Responsive Design</span>
-                                <span>92%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress responsive"></div>
-                            </div>
-                        </div>
-
-                        <div class="skill">
-                            <div class="skill-info">
-                                <span>UI Design</span>
-                                <span>85%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress uidesign"></div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="skills-right">
-
-                    <h3 class="skills-sub-title">
-                        <i class="fa-solid fa-toolbox"></i> Tools & Technologies
-                    </h3>
-
-                    <div class="tools-grid">
-
-                        <div class="tool-badge">
-                            <i class="fa-brands fa-git-alt"></i>
-                            <span>Git</span>
-                        </div>
-
-                        <div class="tool-badge">
-                            <i class="fa-brands fa-github"></i>
-                            <span>GitHub</span>
-                        </div>
-
-                        <div class="tool-badge">
-                            <i class="fa-solid fa-code"></i>
-                            <span>VS Code</span>
-                        </div>
-
-                        <div class="tool-badge">
-                            <i class="fa-brands fa-html5"></i>
-                            <span>HTML5</span>
-                        </div>
-
-                        <div class="tool-badge">
-                            <i class="fa-brands fa-css3-alt"></i>
-                            <span>CSS3</span>
-                        </div>
-
-                        <div class="tool-badge">
-                            <i class="fa-brands fa-js"></i>
-                            <span>JavaScript</span>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="group projects" id="projects">
-
-            <div class="project-title">
-                <h2>My Projects</h2>
-            </div>
-            <div class="project-container">
-                <div class="project-card">
-
-                    <img src="project1.png" alt="Project">
-
-                    <div class="project-overlay">
-
-                        <h3>
-                            Eduplatform Website
-                        </h3>
-
-                        <p>
-                            Modern responsive Website design.
-                        </p>
-
-                        <a href="https://moamenomar978.github.io/Eduplatform-landing/" class="btn primary-btn">
-                            View Project
-                        </a>
-
-                    </div>
-
-                </div>
-
-                <div class="project-card">
-
-                    <img src="project2.png" alt="Project">
-
-                    <div class="project-overlay">
-
-                        <h3>
-                            Ecommerce Website
-                        </h3>
-
-                        <p>
-                            Interactive online shopping interface.
-                        </p>
-
-                        <a href="https://moamenomar978.github.io/LUXE-STORE/" class="btn primary-btn">
-                            View Project
-                        </a>
-
-                    </div>
-
-                </div>
-
-                <div class="project-card">
-
-                    <img src="project3.png" alt="Project">
-
-                    <div class="project-overlay">
-
-                        <h3>
-                            Ecommerce Website
-                        </h3>
-
-                        <p>
-                            Interactive online shopping interface.
-                        </p>
-
-                        <a href="https://moamenomar978.github.io/volt-techstore/" class="btn primary-btn">
-                            View Project
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="group contact" id="contact">
-
-            <div class="contact-title">
-                <h2>Contact Me</h2>
-            </div>
-
-            <div class="contact-container">
-
-                <div class="contact-info">
-
-                    <h3>
-                        Let's Work Together
-                    </h3>
-
-                    <p>
-                        Feel free to contact me for any project or collaboration.
-                    </p>
-
-                    <div class="info-box">
-
-                        <i class="fa-solid fa-envelope"></i>
-
-                        <span>
-                            moamenfathy279@gmail.com
-                        </span>
-
-                    </div>
-
-                    <div class="info-box">
-
-                        <i class="fa-solid fa-phone"></i>
-
-                        <span>
-                            01224234925
-                        </span>
-
-                    </div>
-
-                </div>
-                <form class="contact-form">
-
-                    <input type="text" placeholder="Your Name">
-
-                    <input type="email" placeholder="Your Email">
-
-                    <textarea placeholder="Your Message"></textarea>
-
-                    <button type="submit" class="btn primary-btn">
-                        Send Message
-                    </button>
-
-                </form>
-
-            </div>
-
-        </div>
-
+        <div class="tech-badge badge-1"><i class="fa-brands fa-html5"></i> HTML5</div>
+        <div class="tech-badge badge-2"><i class="fa-brands fa-js"></i> JavaScript</div>
+        <div class="tech-badge badge-3"><i class="fa-brands fa-css3-alt"></i> CSS3</div>
+      </div>
     </div>
-    <footer>
+  </div>
+</section>
 
-        <p>
-            © 2026 Moamen | All Rights Reserved
+<!-- ===== ABOUT ===== -->
+<section id="about">
+  <div class="about-grid">
+    <div class="about-left">
+      <p class="section-tag reveal-left"><i class="fa-solid fa-user"></i> About Me</p>
+      <h2 class="section-title reveal-left" data-delay="1">
+        Passionate about<br><span>great interfaces</span>
+      </h2>
+      <p class="about-text-intro reveal-left" data-delay="2">
+        I'm a Frontend Developer with a deep love for crafting digital experiences
+        that are both beautiful and functional. Every pixel matters to me.
+      </p>
+      <p class="about-text-intro reveal-left" data-delay="3">
+        Studying Computer Science while actively freelancing, I bring academic
+        rigour and real-world delivery together on every project.
+      </p>
+
+      <div class="about-info-grid">
+        <div class="about-info-item reveal" data-delay="2">
+          <i class="fa-solid fa-user"></i>
+          <span>Moamen Fathy</span>
+        </div>
+        <div class="about-info-item reveal" data-delay="3">
+          <i class="fa-solid fa-envelope"></i>
+          <span>moamenfathy279@gmail.com</span>
+        </div>
+        <div class="about-info-item reveal" data-delay="4">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>Egypt 🇪🇬</span>
+        </div>
+        <div class="about-info-item reveal" data-delay="5">
+          <i class="fa-solid fa-graduation-cap"></i>
+          <span>CS Student</span>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:14px;flex-wrap:wrap;">
+        <a href="cv.html" class="btn btn-primary reveal" data-delay="4">
+          <i class="fa-solid fa-file-lines"></i> Full CV
+        </a>
+        <a href="services.html" class="btn btn-outline reveal" data-delay="5">
+          <i class="fa-solid fa-briefcase"></i> My Services
+        </a>
+      </div>
+    </div>
+
+    <div class="about-cards-grid">
+      <div class="about-card reveal" data-delay="1">
+        <div class="about-card-icon"><i class="fa-solid fa-code"></i></div>
+        <h4>Web Development</h4>
+        <p>Modern, responsive websites built from scratch with HTML, CSS &amp; JS.</p>
+      </div>
+      <div class="about-card reveal" data-delay="2">
+        <div class="about-card-icon"><i class="fa-solid fa-palette"></i></div>
+        <h4>UI Design</h4>
+        <p>Clean, user-focused interfaces with strong visual hierarchy.</p>
+      </div>
+      <div class="about-card reveal" data-delay="3">
+        <div class="about-card-icon"><i class="fa-solid fa-mobile-screen"></i></div>
+        <h4>Responsive Design</h4>
+        <p>Pixel-perfect across all screen sizes and devices.</p>
+      </div>
+      <div class="about-card reveal" data-delay="4">
+        <div class="about-card-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+        <h4>Animations</h4>
+        <p>Smooth transitions and micro-interactions that delight users.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SKILLS ===== -->
+<section id="skills">
+  <div style="text-align:center;margin-bottom:60px;">
+    <p class="section-tag reveal" style="display:inline-flex;"><i class="fa-solid fa-chart-bar"></i> My Skills</p>
+    <h2 class="section-title reveal" data-delay="1">What I work with</h2>
+    <p class="section-sub reveal" data-delay="2" style="margin:0 auto;">
+      A focused set of frontend technologies — used to build fast, clean, and beautiful web experiences.
+    </p>
+  </div>
+
+  <!-- SVG gradient def (hidden) -->
+  <svg width="0" height="0" style="position:absolute">
+    <defs>
+      <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%"   stop-color="#0ea5e9"/>
+        <stop offset="100%" stop-color="#38bdf8"/>
+      </linearGradient>
+    </defs>
+  </svg>
+
+  <div class="skills-layout">
+    <!-- Circular rings left col -->
+    <div>
+      <div class="skills-rings">
+
+        <div class="ring-card reveal" data-delay="1">
+          <div class="ring-svg-wrap">
+            <svg viewBox="0 0 90 90">
+              <circle class="ring-bg"   cx="45" cy="45" r="35"/>
+              <circle class="ring-fill" cx="45" cy="45" r="35" data-pct="95"/>
+            </svg>
+            <div class="ring-pct">95%</div>
+          </div>
+          <div class="ring-label">HTML5</div>
+        </div>
+
+        <div class="ring-card reveal" data-delay="2">
+          <div class="ring-svg-wrap">
+            <svg viewBox="0 0 90 90">
+              <circle class="ring-bg"   cx="45" cy="45" r="35"/>
+              <circle class="ring-fill" cx="45" cy="45" r="35" data-pct="90"/>
+            </svg>
+            <div class="ring-pct">90%</div>
+          </div>
+          <div class="ring-label">CSS3</div>
+        </div>
+
+        <div class="ring-card reveal" data-delay="3">
+          <div class="ring-svg-wrap">
+            <svg viewBox="0 0 90 90">
+              <circle class="ring-bg"   cx="45" cy="45" r="35"/>
+              <circle class="ring-fill" cx="45" cy="45" r="35" data-pct="80"/>
+            </svg>
+            <div class="ring-pct">80%</div>
+          </div>
+          <div class="ring-label">JavaScript</div>
+        </div>
+
+        <div class="ring-card reveal" data-delay="4">
+          <div class="ring-svg-wrap">
+            <svg viewBox="0 0 90 90">
+              <circle class="ring-bg"   cx="45" cy="45" r="35"/>
+              <circle class="ring-fill" cx="45" cy="45" r="35" data-pct="92"/>
+            </svg>
+            <div class="ring-pct">92%</div>
+          </div>
+          <div class="ring-label">Responsive</div>
+        </div>
+
+        <div class="ring-card reveal" data-delay="5">
+          <div class="ring-svg-wrap">
+            <svg viewBox="0 0 90 90">
+              <circle class="ring-bg"   cx="45" cy="45" r="35"/>
+              <circle class="ring-fill" cx="45" cy="45" r="35" data-pct="85"/>
+            </svg>
+            <div class="ring-pct">85%</div>
+          </div>
+          <div class="ring-label">UI Design</div>
+        </div>
+
+        <div class="ring-card reveal" data-delay="6">
+          <div class="ring-svg-wrap">
+            <svg viewBox="0 0 90 90">
+              <circle class="ring-bg"   cx="45" cy="45" r="35"/>
+              <circle class="ring-fill" cx="45" cy="45" r="35" data-pct="75"/>
+            </svg>
+            <div class="ring-pct">75%</div>
+          </div>
+          <div class="ring-label">Git / GitHub</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Tools + Soft skills right col -->
+    <div class="skills-tools reveal-right" data-delay="2">
+      <div class="skills-tools-title">
+        <i class="fa-solid fa-toolbox"></i> Tools & Technologies
+      </div>
+      <div class="tools-grid">
+        <div class="tool-pill"><i class="fa-brands fa-git-alt"></i> Git</div>
+        <div class="tool-pill"><i class="fa-brands fa-github"></i> GitHub</div>
+        <div class="tool-pill"><i class="fa-solid fa-code"></i> VS Code</div>
+        <div class="tool-pill"><i class="fa-brands fa-html5"></i> HTML5</div>
+        <div class="tool-pill"><i class="fa-brands fa-css3-alt"></i> CSS3</div>
+        <div class="tool-pill"><i class="fa-brands fa-js"></i> JavaScript</div>
+        <div class="tool-pill"><i class="fa-solid fa-layer-group"></i> Flexbox</div>
+        <div class="tool-pill"><i class="fa-solid fa-table-cells"></i> CSS Grid</div>
+        <div class="tool-pill"><i class="fa-solid fa-mobile-screen"></i> Media Queries</div>
+        <div class="tool-pill"><i class="fa-solid fa-pen-nib"></i> Figma</div>
+      </div>
+
+      <div class="soft-skills">
+        <div class="soft-skills-title">
+          <i class="fa-solid fa-star"></i> Soft Skills
+        </div>
+        <span class="soft-pill"><i class="fa-solid fa-check"></i> Problem Solving</span>
+        <span class="soft-pill"><i class="fa-solid fa-check"></i> Attention to Detail</span>
+        <span class="soft-pill"><i class="fa-solid fa-check"></i> Fast Learner</span>
+        <span class="soft-pill"><i class="fa-solid fa-check"></i> Team Collaboration</span>
+        <span class="soft-pill"><i class="fa-solid fa-check"></i> Time Management</span>
+        <span class="soft-pill"><i class="fa-solid fa-check"></i> Communication</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROJECTS ===== -->
+<section id="projects">
+  <div style="text-align:center;margin-bottom:48px;">
+    <p class="section-tag reveal" style="display:inline-flex;"><i class="fa-solid fa-folder-open"></i> Portfolio</p>
+    <h2 class="section-title reveal" data-delay="1">My Projects</h2>
+    <p class="section-sub reveal" data-delay="2" style="margin:0 auto;">
+      A selection of real-world projects I've designed and developed.
+    </p>
+  </div>
+
+  <div class="project-filters reveal" data-delay="3">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="ecommerce">E-Commerce</button>
+    <button class="filter-btn" data-filter="landing">Landing Page</button>
+    <button class="filter-btn" data-filter="portfolio">Portfolio</button>
+  </div>
+
+  <div class="projects-grid">
+
+    <div class="project-card reveal" data-delay="1" data-category="landing">
+      <div class="project-img">
+        <img src="project1.png" alt="Eduplatform Website">
+        <div class="project-img-overlay">
+          <a href="https://moamenomar978.github.io/Eduplatform-landing/" target="_blank" class="proj-link-btn">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+      </div>
+      <div class="project-body">
+        <div class="project-tags">
+          <span class="project-tag">Landing Page</span>
+          <span class="project-tag">Education</span>
+        </div>
+        <h3 class="project-name">Eduplatform Website</h3>
+        <p class="project-desc">
+          A modern, fully responsive education landing page featuring smooth
+          animations and a clean professional layout built with pure HTML &amp; CSS.
         </p>
+        <div class="project-footer">
+          <div class="project-stack">
+            <div class="stack-icon"><i class="fa-brands fa-html5"></i></div>
+            <div class="stack-icon"><i class="fa-brands fa-css3-alt"></i></div>
+            <div class="stack-icon"><i class="fa-brands fa-js"></i></div>
+          </div>
+          <a href="https://moamenomar978.github.io/Eduplatform-landing/" target="_blank" class="project-visit">
+            Live Preview <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+      </div>
+    </div>
 
-    </footer>
+    <div class="project-card reveal" data-delay="2" data-category="ecommerce">
+      <div class="project-img">
+        <img src="project2.png" alt="LUXE Store">
+        <div class="project-img-overlay">
+          <a href="https://moamenomar978.github.io/LUXE-STORE/" target="_blank" class="proj-link-btn">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+      </div>
+      <div class="project-body">
+        <div class="project-tags">
+          <span class="project-tag">E-Commerce</span>
+          <span class="project-tag">Fashion</span>
+        </div>
+        <h3 class="project-name">LUXE Store</h3>
+        <p class="project-desc">
+          A premium e-commerce UI for a luxury fashion store, featuring
+          product galleries, cart interactions, and an elegant dark aesthetic.
+        </p>
+        <div class="project-footer">
+          <div class="project-stack">
+            <div class="stack-icon"><i class="fa-brands fa-html5"></i></div>
+            <div class="stack-icon"><i class="fa-brands fa-css3-alt"></i></div>
+            <div class="stack-icon"><i class="fa-brands fa-js"></i></div>
+          </div>
+          <a href="https://moamenomar978.github.io/LUXE-STORE/" target="_blank" class="project-visit">
+            Live Preview <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+      </div>
+    </div>
 
-    <script src="script.js"></script>
+    <div class="project-card reveal" data-delay="3" data-category="ecommerce">
+      <div class="project-img">
+        <img src="project3.png" alt="Volt Tech Store">
+        <div class="project-img-overlay">
+          <a href="https://moamenomar978.github.io/volt-techstore/" target="_blank" class="proj-link-btn">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+      </div>
+      <div class="project-body">
+        <div class="project-tags">
+          <span class="project-tag">E-Commerce</span>
+          <span class="project-tag">Tech</span>
+        </div>
+        <h3 class="project-name">Volt Tech Store</h3>
+        <p class="project-desc">
+          A sleek electronics e-commerce front-end with product filtering,
+          interactive cart, and a bold modern visual identity.
+        </p>
+        <div class="project-footer">
+          <div class="project-stack">
+            <div class="stack-icon"><i class="fa-brands fa-html5"></i></div>
+            <div class="stack-icon"><i class="fa-brands fa-css3-alt"></i></div>
+            <div class="stack-icon"><i class="fa-brands fa-js"></i></div>
+          </div>
+          <a href="https://moamenomar978.github.io/volt-techstore/" target="_blank" class="project-visit">
+            Live Preview <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="project-card reveal" data-delay="4" data-category="ecommerce">
+      <div class="project-img">
+        <img src="project4.png" alt="Cafe-Manager">
+        <div class="project-img-overlay">
+          <a href="https://moamenomar978.github.io/Cafe-Manager/" target="_blank" class="proj-link-btn">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+      </div>
+      <div class="project-body">
+        <div class="project-tags">
+          <span class="project-tag">E-Commerce</span>
+          <span class="project-tag">Tech</span>
+        </div>
+        <h3 class="project-name">Cafe-Manager</h3>
+        <p class="project-desc">
+          Complete Point-of-Sale & Business Management System for Cafes,
+          Restaurants, Bakeries, and Retail Stores — runs directly in the browser,
+          no installation needed.
+        </p>
+        <div class="project-footer">
+          <div class="project-stack">
+            <div class="stack-icon"><i class="fa-brands fa-html5"></i></div>
+            <div class="stack-icon"><i class="fa-brands fa-css3-alt"></i></div>
+            <div class="stack-icon"><i class="fa-brands fa-js"></i></div>
+          </div>
+          <a href="https://moamenomar978.github.io/Cafe-Manager/" target="_blank" class="project-visit">
+            Live Preview <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card reveal" data-delay="5" data-category="ecommerce">
+      <div class="project-img">
+        <img src="project5.png" alt="Lara-Beauty">
+        <div class="project-img-overlay">
+          <a href="https://moamenomar978.github.io/lara-beauty/#/home" target="_blank" class="proj-link-btn">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+      </div>
+      <div class="project-body">
+        <div class="project-tags">
+          <span class="project-tag">E-Commerce</span>
+          <span class="project-tag">Tech</span>
+        </div>
+        <h3 class="project-name">Lara-Beauty</h3>
+        <p class="project-desc">
+          An integrated online appointment booking system for beauty centers and small clinics
+          (booking + management panel + cloud database).
+        </p>
+        <div class="project-footer">
+          <div class="project-stack">
+            <div class="stack-icon"><i class="fa-brands fa-html5"></i></div>
+            <div class="stack-icon"><i class="fa-brands fa-css3-alt"></i></div>
+            <div class="stack-icon"><i class="fa-brands fa-js"></i></div>
+          </div>
+          <a href="https://moamenomar978.github.io/lara-beauty/#/home" target="_blank" class="project-visit">
+            Live Preview <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card reveal" data-delay="5" data-category="portfolio">
+      <div class="project-img" style="background:linear-gradient(135deg,#0d1a2d,#122038);display:flex;align-items:center;justify-content:center;">
+        <i class="fa-solid fa-user-tie" style="font-size:80px;color:rgba(56,189,248,.25);"></i>
+        <div class="project-img-overlay">
+          <span class="proj-link-btn" style="background:var(--bg3);color:var(--muted);cursor:default;">
+            <i class="fa-solid fa-eye-slash"></i>
+          </span>
+        </div>
+      </div>
+      <div class="project-body">
+        <div class="project-tags">
+          <span class="project-tag">Portfolio</span>
+          <span class="project-tag">Personal</span>
+        </div>
+        <h3 class="project-name">This Portfolio</h3>
+        <p class="project-desc">
+          The very site you're viewing — designed and coded from scratch
+          with scroll animations, theme toggling, and a fully responsive layout.
+        </p>
+        <div class="project-footer">
+          <div class="project-stack">
+            <div class="stack-icon"><i class="fa-brands fa-html5"></i></div>
+            <div class="stack-icon"><i class="fa-brands fa-css3-alt"></i></div>
+            <div class="stack-icon"><i class="fa-brands fa-js"></i></div>
+          </div>
+          <span class="project-visit" style="color:var(--muted);">
+            You're here <i class="fa-solid fa-location-dot"></i>
+          </span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact">
+  <div class="contact-layout">
+    <div class="contact-left">
+      <p class="section-tag reveal-left"><i class="fa-solid fa-envelope"></i> Contact</p>
+      <h2 class="section-title reveal-left" data-delay="1">
+        Let's build something<br><span>great together</span>
+      </h2>
+      <p class="section-sub contact-left reveal-left" data-delay="2">
+        Have a project in mind? I'd love to hear about it.
+        Fill out the form or reach out via email or social media.
+      </p>
+
+      <div class="contact-cards">
+        <div class="contact-card reveal" data-delay="3">
+          <div class="contact-card-icon"><i class="fa-solid fa-envelope"></i></div>
+          <div class="contact-card-text">
+            <div class="contact-card-label">Email</div>
+            <div class="contact-card-val">moamenfathy279@gmail.com</div>
+          </div>
+        </div>
+        <div class="contact-card reveal" data-delay="4">
+          <div class="contact-card-icon"><i class="fa-solid fa-phone"></i></div>
+          <div class="contact-card-text">
+            <div class="contact-card-label">Phone</div>
+            <div class="contact-card-val">+20 122 423 4925</div>
+          </div>
+        </div>
+        <div class="contact-card reveal" data-delay="5">
+          <div class="contact-card-icon"><i class="fa-solid fa-location-dot"></i></div>
+          <div class="contact-card-text">
+            <div class="contact-card-label">Location</div>
+            <div class="contact-card-val">Egypt — Available Remotely 🌍</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-socials reveal" data-delay="6">
+        <a href="https://github.com/Moamenomar978" target="_blank" class="contact-social-btn" aria-label="GitHub">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/moamen-fathy-67161a352/" target="_blank" class="contact-social-btn" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="https://www.instagram.com/moamen_omar10/" target="_blank" class="contact-social-btn" aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="contact-form-wrap reveal-right" data-delay="2">
+      <!-- Replace YOUR_FORM_ID with actual Formspree ID -->
+      <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+        <div class="form-groups">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">Your Name *</label>
+              <input type="text" id="fname" name="name" placeholder="Moamen Fathy" required>
+            </div>
+            <div class="form-group">
+              <label for="femail">Email Address *</label>
+              <input type="email" id="femail" name="email" placeholder="you@example.com" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="fsubject">Project Type</label>
+            <select id="fsubject" name="subject">
+              <option value="">— Select a service —</option>
+              <option value="Frontend Development">Frontend Development</option>
+              <option value="Landing Page">Landing Page</option>
+              <option value="UI Design">UI Design</option>
+              <option value="Website Redesign">Website Redesign</option>
+              <option value="Portfolio Website">Portfolio Website</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="fmessage">Message *</label>
+            <textarea id="fmessage" name="message" placeholder="Tell me about your project idea, timeline, and budget..." required maxlength="1000"></textarea>
+            <span class="char-count" id="charCount">0 / 1000</span>
+          </div>
+
+          <div class="form-submit">
+            <button type="submit" class="btn btn-primary" id="submitBtn">
+              <i class="fa-solid fa-paper-plane"></i> Send Message
+            </button>
+          </div>
+
+          <div class="form-status" id="formStatus"></div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-logo">Moamen.</div>
+  <p class="footer-copy">© 2026 Moamen Fathy — All Rights Reserved</p>
+  <div class="footer-links">
+    <a href="services.html">Services</a>
+    <a href="cv.html">CV</a>
+    <a href="#contact">Contact</a>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<script src="script.js"></script>
 </body>
-
 </html>
