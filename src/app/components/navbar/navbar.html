@@ -1,0 +1,49 @@
+<div class="scroll-progress" [style.width.%]="scrollFx.progress()"></div>
+
+<nav class="nav" [class.scrolled]="scrollFx.scrolled()">
+  <div class="logo"><a routerLink="/">Moamen.</a></div>
+
+  <ul class="nav-links" [class.active]="menuOpen">
+    <li>
+      <a routerLink="/" fragment="home" (click)="closeMenu()"
+         [class.active-link]="isAnchorActive('home')">Home</a>
+    </li>
+    <li>
+      <a routerLink="/" fragment="about" (click)="closeMenu()"
+         [class.active-link]="isAnchorActive('about')">About</a>
+    </li>
+    <li>
+      <a routerLink="/" fragment="skills" (click)="closeMenu()"
+         [class.active-link]="isAnchorActive('skills')">Skills</a>
+    </li>
+    <li>
+      <a routerLink="/" fragment="projects" (click)="closeMenu()"
+         [class.active-link]="isAnchorActive('projects')">Projects</a>
+    </li>
+    <li>
+      <a routerLink="/" fragment="contact" (click)="closeMenu()"
+         [class.active-link]="isAnchorActive('contact')">Contact</a>
+    </li>
+    <li>
+      <a routerLink="/services" (click)="closeMenu()"
+         [class.active-link]="activePage === 'services'">Services</a>
+    </li>
+    <li>
+      <a routerLink="/cv" (click)="closeMenu()"
+         [class.active-link]="activePage === 'cv'">CV</a>
+    </li>
+  </ul>
+
+  <div class="nav-actions">
+    <button class="theme-btn" aria-label="Toggle theme" (click)="theme.toggle()">
+      <i class="fa-solid" [class.fa-moon]="theme.mode() === 'dark'" [class.fa-sun]="theme.mode() === 'light'"></i>
+    </button>
+    <button class="menu-btn" aria-label="Open menu" (click)="toggleMenu()">
+      <i class="fa-solid" [class.fa-bars]="!menuOpen" [class.fa-xmark]="menuOpen"></i>
+    </button>
+  </div>
+</nav>
+
+<button class="back-to-top" [class.show]="scrollFx.showBackToTop()" aria-label="Back to top" (click)="scrollFx.scrollToTop()">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>

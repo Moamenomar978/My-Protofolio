@@ -1,0 +1,8 @@
+<section class="page-hero">
+  <p class="section-tag" style="display:inline-flex;margin-bottom:18px;">
+    <i class="fa-solid fa-user"></i> Account
+  </p>
+  <h1>My <span>Profile</span></h1>
+  <p *ngIf="auth.isLoggedIn(); else guest">Signed in as <strong>{{ auth.currentUser }}</strong></p>
+  <ng-template #guest><p>You're not signed in.</p></ng-template>
+</section>

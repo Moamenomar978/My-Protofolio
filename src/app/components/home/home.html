@@ -1,0 +1,337 @@
+<!-- ===== HERO ===== -->
+<section id="home">
+  <div class="hero-glow"></div>
+  <div class="hero-glow hero-glow-2"></div>
+  <div class="hero-dots">
+    <span *ngFor="let dot of heroDots" [ngStyle]="dot"></span>
+  </div>
+
+  <div class="hero-inner">
+    <div class="hero-left">
+      <p class="hero-greeting">
+        <span class="hero-greeting-dot"></span>
+        Available for work
+      </p>
+      <h1 class="hero-name">Moamen<br>Fathy</h1>
+      <h2 class="hero-role">{{ typingText }}</h2>
+      <p class="hero-desc">
+        I build modern, responsive, and highly interactive websites
+        that combine clean code with stunning design to create
+        unforgettable user experiences.
+      </p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn btn-primary">
+          <i class="fa-solid fa-rocket"></i> View Projects
+        </a>
+        <a href="#contact" class="btn btn-outline">
+          <i class="fa-solid fa-envelope"></i> Contact Me
+        </a>
+      </div>
+
+      <div class="hero-stats" #statsRow>
+        <div class="stat-item" *ngFor="let stat of stats">
+          <span class="stat-num">{{ stat.value }}+</span>
+          <span class="stat-label">{{ stat.label }}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="profile-ring-wrap">
+        <div class="ring-outer"></div>
+        <div class="ring-inner"></div>
+        <div class="profile-img-wrap">
+          <img src="profile.jpeg" alt="Moamen Fathy">
+        </div>
+        <div class="tech-badge badge-1"><i class="fa-brands fa-html5"></i> HTML5</div>
+        <div class="tech-badge badge-2"><i class="fa-brands fa-js"></i> JavaScript</div>
+        <div class="tech-badge badge-3"><i class="fa-brands fa-css3-alt"></i> CSS3</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<app-about-as></app-about-as>
+
+<!-- ===== SKILLS ===== -->
+<section id="skills">
+  <div style="text-align:center;margin-bottom:60px;">
+    <p class="section-tag" appReveal style="display:inline-flex;"><i class="fa-solid fa-chart-bar"></i> My Skills</p>
+    <h2 class="section-title" appReveal [revealDelay]="1">What I work with</h2>
+    <p class="section-sub" appReveal [revealDelay]="2" style="margin:0 auto;">
+      A focused set of frontend technologies — used to build fast, clean, and beautiful web experiences.
+    </p>
+  </div>
+
+  <div class="skills-layout">
+    <div>
+      <div class="skills-rings">
+        <div class="ring-card" appReveal *ngFor="let ring of skillRings; let i = index" [revealDelay]="i + 1">
+          <div class="ring-svg-wrap">
+            <svg viewBox="0 0 90 90">
+              <circle class="ring-bg" cx="45" cy="45" r="35"/>
+              <circle class="ring-fill" #ringFill cx="45" cy="45" r="35"/>
+            </svg>
+            <div class="ring-pct">{{ ring.percent }}%</div>
+          </div>
+          <div class="ring-label">{{ ring.name }}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="skills-tools" appReveal revealDirection="right" [revealDelay]="2">
+      <div class="skills-tools-title">
+        <i class="fa-solid fa-toolbox"></i> Tools &amp; Technologies
+      </div>
+      <div class="tools-grid">
+        <div class="tool-pill" *ngFor="let tool of tools"><i [class]="tool.icon"></i> {{ tool.label }}</div>
+      </div>
+
+      <div class="soft-skills">
+        <div class="soft-skills-title">
+          <i class="fa-solid fa-star"></i> Soft Skills
+        </div>
+        <span class="soft-pill" *ngFor="let skill of softSkills"><i class="fa-solid fa-check"></i> {{ skill }}</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROJECTS ===== -->
+<section id="projects">
+  <div style="text-align:center;margin-bottom:48px;">
+    <p class="section-tag" appReveal style="display:inline-flex;"><i class="fa-solid fa-folder-open"></i> Portfolio</p>
+    <h2 class="section-title" appReveal [revealDelay]="1">My Projects</h2>
+    <p class="section-sub" appReveal [revealDelay]="2" style="margin:0 auto;">
+      A selection of real-world projects I've designed and developed.
+    </p>
+  </div>
+
+  <div class="project-filters" appReveal [revealDelay]="3">
+    <button class="filter-btn" *ngFor="let f of filters"
+            [class.active]="activeFilter === f.key"
+            (click)="setFilter(f.key)">{{ f.label }}</button>
+  </div>
+
+  <div class="projects-grid">
+    <div class="project-card" appReveal [revealDelay]="i + 1" *ngFor="let project of filteredProjects; let i = index" [attr.data-category]="project.category">
+      <ng-container *ngIf="!project.isCurrentSite; else currentSiteImg">
+        <div class="project-img">
+          <img [src]="project.image" [alt]="project.title">
+          <div class="project-img-overlay">
+            <a [href]="project.liveUrl" target="_blank" rel="noopener" class="proj-link-btn">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </div>
+      </ng-container>
+      <ng-template #currentSiteImg>
+        <div class="project-img" style="background:linear-gradient(135deg,#0d1a2d,#122038);display:flex;align-items:center;justify-content:center;">
+          <i class="fa-solid fa-user-tie" style="font-size:80px;color:rgba(56,189,248,.25);"></i>
+          <div class="project-img-overlay">
+            <span class="proj-link-btn" style="background:var(--bg3);color:var(--muted);cursor:default;">
+              <i class="fa-solid fa-eye-slash"></i>
+            </span>
+          </div>
+        </div>
+      </ng-template>
+
+      <div class="project-body">
+        <div class="project-tags">
+          <span class="project-tag" *ngFor="let tag of project.tags">{{ tag }}</span>
+        </div>
+        <h3 class="project-name">{{ project.title }}</h3>
+        <p class="project-desc">{{ project.description }}</p>
+        <div class="project-footer">
+          <div class="project-stack">
+            <div class="stack-icon"><i class="fa-brands fa-html5"></i></div>
+            <div class="stack-icon"><i class="fa-brands fa-css3-alt"></i></div>
+            <div class="stack-icon"><i class="fa-brands fa-js"></i></div>
+          </div>
+          <a *ngIf="!project.isCurrentSite" [href]="project.liveUrl" target="_blank" rel="noopener" class="project-visit">
+            Live Preview <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+          <span *ngIf="project.isCurrentSite" class="project-visit" style="color:var(--muted);">
+            You're here <i class="fa-solid fa-location-dot"></i>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact">
+  <div class="contact-layout">
+    <div class="contact-left">
+      <p class="section-tag" appReveal revealDirection="left"><i class="fa-solid fa-envelope"></i> Contact</p>
+      <h2 class="section-title" appReveal revealDirection="left" [revealDelay]="1">
+        Let's build something<br><span>great together</span>
+      </h2>
+      <p class="section-sub" appReveal revealDirection="left" [revealDelay]="2">
+        Have a project in mind? Send me a message via the form,
+        email, or chat with me directly on WhatsApp.
+      </p>
+
+      <div class="contact-cards">
+        <a class="contact-card" appReveal [revealDelay]="3" href="mailto:moamenfathy279@gmail.com">
+          <div class="contact-card-icon gmail-icon">
+            <i class="fa-solid fa-envelope"></i>
+          </div>
+          <div class="contact-card-text">
+            <div class="contact-card-label">Gmail</div>
+            <div class="contact-card-val">moamenfathy279&#64;gmail.com</div>
+          </div>
+          <i class="fa-solid fa-arrow-up-right-from-square contact-card-arrow"></i>
+        </a>
+
+        <a class="contact-card contact-card-wa" appReveal [revealDelay]="4"
+           href="https://wa.me/201224234925?text=Hi%20Moamen%2C%20I%20found%20your%20portfolio%20and%20I%27d%20like%20to%20discuss%20a%20project."
+           target="_blank" rel="noopener">
+          <div class="contact-card-icon wa-icon">
+            <i class="fa-brands fa-whatsapp"></i>
+          </div>
+          <div class="contact-card-text">
+            <div class="contact-card-label">WhatsApp — Chat directly</div>
+            <div class="contact-card-val">+20 122 423 4925</div>
+          </div>
+          <i class="fa-solid fa-arrow-up-right-from-square contact-card-arrow"></i>
+        </a>
+
+        <div class="contact-card" appReveal [revealDelay]="5">
+          <div class="contact-card-icon">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+          <div class="contact-card-text">
+            <div class="contact-card-label">Location</div>
+            <div class="contact-card-val">Egypt — Available Remotely 🌍</div>
+          </div>
+        </div>
+      </div>
+
+      <a class="btn-whatsapp" appReveal [revealDelay]="5"
+         href="https://wa.me/201224234925?text=Hi%20Moamen%2C%20I%20found%20your%20portfolio%20and%20I%27d%20like%20to%20discuss%20a%20project."
+         target="_blank" rel="noopener">
+        <span class="wa-pulse"></span>
+        <i class="fa-brands fa-whatsapp"></i>
+        Chat on WhatsApp Now
+        <span class="wa-badge">Usually replies in minutes</span>
+      </a>
+
+      <div class="contact-socials" appReveal [revealDelay]="6">
+        <a href="https://github.com/Moamenomar978" target="_blank" class="contact-social-btn" aria-label="GitHub">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/moamen-fathy-67161a352/" target="_blank" class="contact-social-btn" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="https://www.instagram.com/moamen_omar10/" target="_blank" class="contact-social-btn" aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="contact-form-wrap" appReveal revealDirection="right" [revealDelay]="2">
+
+      <!-- SUCCESS STATE -->
+      <div class="form-success-screen" [class.visible]="submitted" *ngIf="submitted">
+        <div class="success-icon-wrap">
+          <svg class="success-checkmark" viewBox="0 0 52 52">
+            <circle class="checkmark-circle" cx="26" cy="26" r="25" fill="none"/>
+            <path class="checkmark-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+          </svg>
+        </div>
+        <h3 class="success-title">Message Sent! 🎉</h3>
+        <p class="success-desc">
+          Your message is on its way to my Gmail inbox.
+          I'll reply within <strong>24 hours</strong>.
+        </p>
+        <p class="success-desc" style="font-size:13px;margin-top:-8px;">
+          Need a faster reply? Chat on WhatsApp:
+        </p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:4px;">
+          <a class="btn-whatsapp btn-whatsapp-sm"
+             href="https://wa.me/201224234925?text=Hi%20Moamen%2C%20I%20just%20sent%20you%20a%20message%20from%20your%20portfolio!"
+             target="_blank" rel="noopener">
+            <i class="fa-brands fa-whatsapp"></i> WhatsApp Me
+          </a>
+          <button class="btn btn-outline" style="padding:12px 20px;" (click)="sendAnother()">
+            <i class="fa-solid fa-rotate-left"></i> Send Another
+          </button>
+        </div>
+      </div>
+
+      <!-- FORM -->
+      <form *ngIf="!submitted" [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate>
+        <div class="form-groups">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">Your Name <span class="required-star">*</span></label>
+              <input type="text" id="fname" formControlName="from_name"
+                     [class.input-error]="contactForm.get('from_name')?.invalid && contactForm.get('from_name')?.touched"
+                     placeholder="e.g. Ahmed Mohamed" autocomplete="name">
+              <span class="field-error" [class.visible]="contactForm.get('from_name')?.invalid && contactForm.get('from_name')?.touched">
+                Please enter your name.
+              </span>
+            </div>
+            <div class="form-group">
+              <label for="femail">Email Address <span class="required-star">*</span></label>
+              <input type="email" id="femail" formControlName="reply_to"
+                     [class.input-error]="contactForm.get('reply_to')?.invalid && contactForm.get('reply_to')?.touched"
+                     placeholder="you@example.com" autocomplete="email">
+              <span class="field-error" [class.visible]="contactForm.get('reply_to')?.invalid && contactForm.get('reply_to')?.touched">
+                Please enter a valid email.
+              </span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="fsubject">Project Type</label>
+            <select id="fsubject" formControlName="project_type">
+              <option value="">— Select a service —</option>
+              <option *ngFor="let type of projectTypes" [value]="type">{{ type }}</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="fmessage">Message <span class="required-star">*</span></label>
+            <textarea id="fmessage" formControlName="message"
+              [class.input-error]="contactForm.get('message')?.invalid && contactForm.get('message')?.touched"
+              placeholder="Tell me about your project idea, timeline, and budget..." maxlength="1000"></textarea>
+            <div class="field-footer">
+              <span class="field-error" [class.visible]="contactForm.get('message')?.invalid && contactForm.get('message')?.touched">
+                Please write a message (at least 10 characters).
+              </span>
+              <span class="char-count">{{ messageLength }} / 1000</span>
+            </div>
+          </div>
+
+          <div class="form-submit">
+            <button type="submit" class="btn btn-primary" [disabled]="submitting">
+              <span class="btn-text" *ngIf="!submitting"><i class="fa-solid fa-paper-plane"></i> Send Message</span>
+              <span class="btn-loading" *ngIf="submitting">
+                <i class="fa-solid fa-spinner fa-spin"></i> Sending…
+              </span>
+            </button>
+          </div>
+
+          <div class="form-status" [class.visible]="!!formError" [class.status-error]="!!formError" *ngIf="formError">
+            <i class="fa-solid fa-circle-xmark"></i> {{ formError }}
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-logo">Moamen.</div>
+  <p class="footer-copy">© 2026 Moamen Fathy — All Rights Reserved</p>
+  <div class="footer-links">
+    <a routerLink="/services">Services</a>
+    <a routerLink="/cv">CV</a>
+    <a href="#contact">Contact</a>
+  </div>
+</footer>

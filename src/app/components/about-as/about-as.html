@@ -1,0 +1,42 @@
+<section id="about">
+  <div class="about-grid">
+    <div class="about-left">
+      <p class="section-tag" appReveal revealDirection="left"><i class="fa-solid fa-user"></i> About Me</p>
+      <h2 class="section-title" appReveal revealDirection="left" [revealDelay]="1">
+        Passionate about<br><span>great interfaces</span>
+      </h2>
+      <p class="about-text-intro" appReveal revealDirection="left" [revealDelay]="2">
+        I'm a Frontend Developer with a deep love for crafting digital experiences
+        that are both beautiful and functional. Every pixel matters to me.
+      </p>
+      <p class="about-text-intro" appReveal revealDirection="left" [revealDelay]="3">
+        Studying Computer Science while actively freelancing, I bring academic
+        rigour and real-world delivery together on every project.
+      </p>
+
+      <div class="about-info-grid">
+        <div class="about-info-item" appReveal *ngFor="let item of infoItems" [revealDelay]="item.delay">
+          <i [class]="item.icon"></i>
+          <span>{{ item.text }}</span>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:14px;flex-wrap:wrap;">
+        <a routerLink="/cv" class="btn btn-primary" appReveal [revealDelay]="4">
+          <i class="fa-solid fa-file-lines"></i> Full CV
+        </a>
+        <a routerLink="/services" class="btn btn-outline" appReveal [revealDelay]="5">
+          <i class="fa-solid fa-briefcase"></i> My Services
+        </a>
+      </div>
+    </div>
+
+    <div class="about-cards-grid">
+      <div class="about-card" appReveal *ngFor="let card of cards" [revealDelay]="card.delay">
+        <div class="about-card-icon"><i [class]="card.icon"></i></div>
+        <h4>{{ card.title }}</h4>
+        <p>{{ card.text }}</p>
+      </div>
+    </div>
+  </div>
+</section>

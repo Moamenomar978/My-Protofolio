@@ -1,0 +1,23 @@
+<section class="page-hero">
+  <p class="section-tag" style="display:inline-flex;margin-bottom:18px;">
+    <i class="fa-solid fa-lock"></i> Restricted Area
+  </p>
+  <h1>Sign <span>In</span></h1>
+  <p>This is a placeholder login for the admin area scaffold.</p>
+</section>
+
+<div class="contact-form-wrap" style="max-width:420px;margin:0 auto 80px;">
+  <form (ngSubmit)="onLogin()">
+    <div class="form-groups">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input id="username" name="username" type="text" [(ngModel)]="username" placeholder="admin" required>
+      </div>
+      <div class="form-submit">
+        <button type="submit" class="btn btn-primary">
+          <i class="fa-solid fa-right-to-bracket"></i> Sign In
+        </button>
+      </div>
+    </div>
+  </form>
+</div>

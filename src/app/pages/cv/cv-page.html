@@ -1,0 +1,114 @@
+<app-navbar activePage="cv"></app-navbar>
+
+<!-- HERO -->
+<div class="cv-page-hero">
+  <div>
+    <p class="section-tag" style="display:inline-flex;margin-bottom:16px;">
+      <i class="fa-solid fa-file-lines"></i> Curriculum Vitae
+    </p>
+    <h1 class="cv-hero-name">Moamen <span>Fathy</span></h1>
+    <p class="cv-hero-role">Frontend Developer</p>
+    <p class="cv-hero-desc">
+      Passionate about building modern, responsive, and interactive websites
+      with clean code, beautiful UI, and smooth user experiences.
+    </p>
+    <div class="cv-hero-btns">
+      <button class="btn btn-primary" (click)="downloadPdf()">
+        <i class="fa-solid fa-download"></i> Download PDF
+      </button>
+      <a routerLink="/" fragment="contact" class="btn btn-outline">
+        <i class="fa-solid fa-envelope"></i> Contact Me
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT BAR -->
+<div class="cv-contact-bar">
+  <div class="cv-contact-item"><i class="fa-solid fa-envelope"></i> moamenfathy279&#64;gmail.com</div>
+  <div class="cv-contact-item"><i class="fa-solid fa-phone"></i> +20 122 423 4925</div>
+  <div class="cv-contact-item"><i class="fa-brands fa-github"></i> github.com/Moamenomar978</div>
+  <div class="cv-contact-item"><i class="fa-brands fa-linkedin"></i> linkedin.com/in/moamen-fathy-67161a352</div>
+  <div class="cv-contact-item"><i class="fa-solid fa-location-dot"></i> Egypt — Remote Available</div>
+</div>
+
+<!-- BODY -->
+<div class="cv-grid">
+  <div class="left-col">
+
+    <!-- Education -->
+    <div class="cv-section" appReveal revealDirection="left">
+      <h2 class="cv-section-head"><i class="fa-solid fa-graduation-cap"></i> Education</h2>
+      <div class="cv-timeline-item" *ngFor="let edu of education">
+        <p class="section-tag" style="display:inline-flex;margin-bottom:10px;font-size:11px;">{{ edu.period }}</p>
+        <div class="cv-item-title">{{ edu.title }}</div>
+        <div class="cv-item-sub">{{ edu.subtitle }}</div>
+        <p class="cv-item-desc">{{ edu.description }}</p>
+      </div>
+    </div>
+
+    <!-- Experience -->
+    <div class="cv-section" appReveal revealDirection="left" [revealDelay]="2">
+      <h2 class="cv-section-head"><i class="fa-solid fa-briefcase"></i> Experience</h2>
+      <div class="cv-timeline-item" *ngFor="let exp of experience">
+        <p class="section-tag" style="display:inline-flex;margin-bottom:10px;font-size:11px;">{{ exp.period }}</p>
+        <div class="cv-item-title">{{ exp.title }}</div>
+        <div class="cv-item-sub">{{ exp.subtitle }}</div>
+        <p class="cv-item-desc">{{ exp.description }}</p>
+      </div>
+    </div>
+
+    <!-- Languages -->
+    <div class="cv-section" appReveal revealDirection="left" [revealDelay]="3">
+      <h2 class="cv-section-head"><i class="fa-solid fa-language"></i> Languages</h2>
+      <div class="cv-lang-item" *ngFor="let lang of languages">
+        <span class="cv-lang-name">{{ lang.name }}</span>
+        <div class="language-level" style="display:flex;align-items:center;gap:10px;">
+          <div class="cv-lang-dots" style="display:flex;gap:5px;">
+            <div class="cv-dot" *ngFor="let on of lang.dots" [class.on]="on"></div>
+          </div>
+          <span class="cv-lang-label">{{ lang.label }}</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="right-col">
+
+    <!-- Technical Skills -->
+    <div class="cv-section" appReveal revealDirection="right">
+      <h2 class="cv-section-head"><i class="fa-solid fa-code"></i> Technical Skills</h2>
+      <div class="cv-skill-item" *ngFor="let skill of technicalSkills">
+        <div class="cv-skill-row"><span>{{ skill.name }}</span><span>{{ skill.percent }}%</span></div>
+        <div class="cv-skill-bar"><div class="cv-skill-fill" #skillBar style="width:0"></div></div>
+      </div>
+    </div>
+
+    <!-- Tools -->
+    <div class="cv-section" appReveal revealDirection="right" [revealDelay]="2">
+      <h2 class="cv-section-head"><i class="fa-solid fa-toolbox"></i> Tools</h2>
+      <div class="tools-grid">
+        <div class="tool-pill" *ngFor="let tool of tools"><i [class]="tool.icon"></i> {{ tool.label }}</div>
+      </div>
+    </div>
+
+    <!-- Soft Skills -->
+    <div class="cv-section" appReveal revealDirection="right" [revealDelay]="3">
+      <h2 class="cv-section-head"><i class="fa-solid fa-star"></i> Soft Skills</h2>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;">
+        <span class="soft-pill" *ngFor="let skill of softSkills"><i class="fa-solid fa-check"></i> {{ skill }}</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="footer-logo">Moamen.</div>
+  <p class="footer-copy">© 2026 Moamen Fathy — All Rights Reserved</p>
+  <div class="footer-links">
+    <a routerLink="/services">Services</a>
+    <a routerLink="/" fragment="contact">Contact</a>
+  </div>
+</footer>

@@ -1,0 +1,63 @@
+<app-navbar activePage="services"></app-navbar>
+
+<!-- HERO -->
+<div class="page-hero">
+  <p class="section-tag" style="display:inline-flex;margin-bottom:18px;">
+    <i class="fa-solid fa-briefcase"></i> What I Offer
+  </p>
+  <h1>My <span>Services</span></h1>
+  <p>
+    High-quality frontend development and design services tailored
+    exactly to your needs — on time and within budget.
+  </p>
+</div>
+
+<!-- SERVICES GRID -->
+<div class="services-grid">
+  <div class="service-card" appReveal *ngFor="let service of services; let i = index" [revealDelay]="i + 1">
+    <div class="service-icon-wrap"><i [class]="service.icon"></i></div>
+    <h3 class="service-title">{{ service.title }}</h3>
+    <p class="service-desc">{{ service.description }}</p>
+    <ul class="service-features">
+      <li class="service-feature" *ngFor="let feature of service.features">
+        <i class="fa-solid fa-check"></i> {{ feature }}
+      </li>
+    </ul>
+    <div class="service-footer">
+      <div class="service-price-tag">
+        <div class="service-price-from">Starting from</div>
+        <div class="service-price-val">{{ service.priceFrom }}</div>
+      </div>
+      <a routerLink="/" fragment="contact" class="btn btn-primary">Hire Me</a>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="cta-section">
+  <div>
+    <h2 class="cta-title">Have a Project in <span>Mind?</span></h2>
+    <p class="cta-desc">
+      Let's work together to bring your idea to life.
+      I respond to all inquiries within 24 hours.
+    </p>
+  </div>
+  <div class="cta-btns">
+    <a routerLink="/" fragment="contact" class="btn btn-primary">
+      <i class="fa-solid fa-envelope"></i> Contact Me
+    </a>
+    <a routerLink="/cv" class="btn btn-outline">
+      <i class="fa-solid fa-file-lines"></i> View CV
+    </a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-logo">Moamen.</div>
+  <p class="footer-copy">© 2026 Moamen Fathy — All Rights Reserved</p>
+  <div class="footer-links">
+    <a routerLink="/">Home</a>
+    <a routerLink="/cv">CV</a>
+    <a routerLink="/" fragment="contact">Contact</a>
+  </div>
+</footer>
