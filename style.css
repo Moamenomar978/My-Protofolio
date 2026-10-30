@@ -18,8 +18,8 @@
   --text:       #eef2f7;
   --muted:      #a3b0c2;
   --muted2:     #7b8aa0;
-  --font-sans:  'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  --font-display:'Manrope', 'Inter', system-ui, sans-serif;
+  --font-sans:  'Inter', system-ui, -apple-system, 'Segoe UI';
+  --font-display:'Manrope', 'Inter', system-ui;
   --t:          0.25s ease;
   --t-slow:     0.45s ease;
   --radius:     14px;
