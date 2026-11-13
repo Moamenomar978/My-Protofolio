@@ -222,9 +222,9 @@ if (bttBtn) bttBtn.addEventListener("click", () => window.scrollTo({ top: 0, beh
   4. Account → General → Public Key
   5. Paste the three values below
 */
-const EMAILJS_PUBLIC_KEY  = "YOUR_PUBLIC_KEY";
-const EMAILJS_SERVICE_ID  = "YOUR_SERVICE_ID";
-const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID";
+const EMAILJS_PUBLIC_KEY  = "QlnRltTxmbuFB9vTQ";
+const EMAILJS_SERVICE_ID  = "service_fmzdxcv";
+const EMAILJS_TEMPLATE_ID = "template_0261gex";
 const emailReady = () =>
   typeof emailjs !== "undefined" &&
   ![EMAILJS_PUBLIC_KEY, EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID].some(v => v.includes("YOUR"));
