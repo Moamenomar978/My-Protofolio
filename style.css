@@ -1,6 +1,7 @@
 /* =============================================
    VARIABLES & RESET  —  "Ink & Amber" palette
    ============================================= */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap');
 :root {
   --bg:         #0b1118;   /* ink */
   --bg2:        #101822;   /* raised surface */
@@ -18,8 +19,6 @@
   --text:       #eef2f7;
   --muted:      #a3b0c2;
   --muted2:     #7b8aa0;
-  --font-sans:  'Inter', system-ui , -apple-system , 'Segoe UI';
-  --font-display: 'Manrope', 'Inter', system-ui;
   --t:          0.25s ease;
   --t-slow:     0.45s ease;
   --radius:     14px;
